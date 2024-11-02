@@ -27,6 +27,10 @@ The primary goal of this project is to identify clusters of fraudulent transacti
 - DBSCAN was able to isolate several clusters, with certain clusters showing a higher density of fraudulent transactions.
 - The algorithm’s performance was compared to traditional methods, and DBSCAN proved effective in scenarios where fraud cases formed dense groups within the data.
 - Limitations: Due to the high dimensionality and imbalance in the dataset, results required careful tuning of the DBSCAN parameters.
+![Fuzzy results of the DBSCAN algorithm applied to the dataset](images/Figure-1.png)
+![Binary results of the DBSCAN algorithm on the dataset](images/Figure-2.png)
+![Figure_1](https://github.com/user-attachments/assets/65517b56-d179-47ee-a2f2-a62fb991ad7a)
+
 
 ## How to Run
 1. Clone the repository.
