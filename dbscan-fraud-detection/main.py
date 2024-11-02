@@ -42,3 +42,4 @@ plt.xlabel('PCA Component 1')
 plt.ylabel('PCA Component 2')
 plt.legend()
 plt.show()
+
