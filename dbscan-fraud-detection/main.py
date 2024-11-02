@@ -5,7 +5,7 @@ from sklearn.cluster import DBSCAN
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 
-# Load dataset (replace 'transactions.csv' with the actual file path)
+# Load dataset
 df = pd.read_csv('creditcard.csv')
 
 # Separate features and labels
