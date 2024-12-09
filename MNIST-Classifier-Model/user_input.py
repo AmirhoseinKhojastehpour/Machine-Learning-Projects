@@ -9,18 +9,19 @@ from torch import nn
 class SimpleNN(nn.Module):
     def __init__(self):
         super(SimpleNN, self).__init__()
-        self.fc1 = nn.Linear(784, 128)  # First layer with 784 input and 128 output neurons
+        self.fc1 = nn.Linear(784, 512)  # First layer with 784 input and 128 output neurons
         self.tanh = nn.Tanh()  # Tanh activation for hidden layer
-        self.dropout1 = nn.Dropout(p=0.05)
-        self.fc2 = nn.Linear(128, 10)  # Second layer with 128 input and 10 output neurons (for 10 classes)
-        self.softmax = nn.Softmax(dim=1)  # Softmax for output layer
+        # self.dropout1 = nn.Dropout(p=0.05)
+        self.fc2 = nn.Linear(512, 10)  # Second layer with 128 input and 10 output neurons (for 10 classes)
+        # self.leakyRelu = nn.leakyRelu(dim=1)  # leakyRelu for output layer
+        self.leakyRelu = nn.LeakyReLU(0.2)
 
     def forward(self, x):
         x = x.view(x.size(0), -1)  # Flatten the input tensor
         x = self.fc1(x)  # Apply first layer
         x = self.tanh(x)  # Apply tanh activation
         x = self.fc2(x)  # Apply second layer
-        x = self.softmax(x)  # Apply softmax activation
+        x = self.leakyRelu(x)  # Apply leakyRelu activation
         return x
 
 # Load the pre-trained model
@@ -163,3 +164,4 @@ while True:
         screen.blit(classificationText, classificationRect)
 
     pygame.display.flip()
+    
