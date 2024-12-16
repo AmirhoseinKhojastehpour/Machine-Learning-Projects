@@ -89,10 +89,10 @@ torch.save(model.state_dict(), 'model.pth')
 
 ## How to Run User Input Predictions
 
-You can use the user_input.py script to classify a handwritten digit based on the trained model. Follow these steps:
-	1.	Ensure the trained model file (model.pth) exists in the project directory. If not, retrain the model or download it.
-	2.	Open a terminal and navigate to the project directory.
-	3.	Run the following command:
+You can use the user_input.py script to classify a handwritten digit based on the trained model. Follow these steps:  
+	1.	Ensure the trained model file (model.pth) exists in the project directory. If not, retrain the model or download it.  
+	2.	Open a terminal and navigate to the project directory.  
+	3.	Run the following command:  
     
 ```bash
 python user_input.py model.pth
