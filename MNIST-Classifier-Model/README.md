@@ -41,7 +41,6 @@ The goal is to classify the handwritten digits in the MNIST dataset with high ac
 
 ### **Training Progress**
 
-```plaintext
 Epoch [1/10], Loss: 0.3465, Accuracy: 0.8954
 Epoch [2/10], Loss: 0.1564, Accuracy: 0.9539
 Epoch [3/10], Loss: 0.1128, Accuracy: 0.9671
@@ -52,7 +51,19 @@ Epoch [7/10], Loss: 0.0549, Accuracy: 0.9841
 Epoch [8/10], Loss: 0.0469, Accuracy: 0.9863
 Epoch [9/10], Loss: 0.0444, Accuracy: 0.9868
 Epoch [10/10], Loss: 0.0417, Accuracy: 0.9874
-‍‍‍```
+‍‍
+### Class-wise Accuracy on Test Data
+
+Class 0: 97.35%
+Class 1: 98.77%
+Class 2: 98.35%
+Class 3: 95.84%
+Class 4: 96.44%
+Class 5: 98.09%
+Class 6: 93.42%
+Class 7: 96.98%
+Class 8: 98.36%
+Class 9: 98.32%
 
 ---
 
@@ -60,9 +71,9 @@ Epoch [10/10], Loss: 0.0417, Accuracy: 0.9874
 
 Below are sample visualizations of the model's predictions:
 
-1. ![Sample Result 1](result1.png)
-2. ![Sample Result 2](result2.png)
-3. ![Sample Result 3](result3.png)
+1. ![Sample Result 1](./images/Figure_1.png)
+2. ![Sample Result 2](./images/Figure_2.png)
+3. ![Sample Result 3](./images/Figure_3.png)
 
 ---
 
@@ -86,7 +97,7 @@ You can use the user_input.py script to classify a handwritten digit based on th
 ```bash
 python user_input.py model.pth
 ```
-    4.	Follow the instructions in the terminal:
+    •	Follow the instructions in the terminal:
 	•	Provide the path to a 28x28 grayscale digit image, or
 	•	Draw a digit on the pop-up canvas if this feature is enabled in your GUI setup.
 
