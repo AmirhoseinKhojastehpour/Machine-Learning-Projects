@@ -41,29 +41,29 @@ The goal is to classify the handwritten digits in the MNIST dataset with high ac
 
 ### **Training Progress**
 
-Epoch [1/10], Loss: 0.3465, Accuracy: 0.8954 
-Epoch [2/10], Loss: 0.1564, Accuracy: 0.9539 
-Epoch [3/10], Loss: 0.1128, Accuracy: 0.9671 
-Epoch [4/10], Loss: 0.0864, Accuracy: 0.9746 
+Epoch [1/10], Loss: 0.3465, Accuracy: 0.8954  
+Epoch [2/10], Loss: 0.1564, Accuracy: 0.9539  
+Epoch [3/10], Loss: 0.1128, Accuracy: 0.9671  
+Epoch [4/10], Loss: 0.0864, Accuracy: 0.9746  
 Epoch [5/10], Loss: 0.0708, Accuracy: 0.9791  
-Epoch [6/10], Loss: 0.0623, Accuracy: 0.9818 
-Epoch [7/10], Loss: 0.0549, Accuracy: 0.9841 
-Epoch [8/10], Loss: 0.0469, Accuracy: 0.9863 
-Epoch [9/10], Loss: 0.0444, Accuracy: 0.9868 
-Epoch [10/10], Loss: 0.0417, Accuracy: 0.9874 
+Epoch [6/10], Loss: 0.0623, Accuracy: 0.9818  
+Epoch [7/10], Loss: 0.0549, Accuracy: 0.9841  
+Epoch [8/10], Loss: 0.0469, Accuracy: 0.9863  
+Epoch [9/10], Loss: 0.0444, Accuracy: 0.9868  
+Epoch [10/10], Loss: 0.0417, Accuracy: 0.9874  
 ‍‍
 ### Class-wise Accuracy on Test Data
 
-Class 0: 97.35% 
-Class 1: 98.77% 
-Class 2: 98.35% 
-Class 3: 95.84% 
-Class 4: 96.44% 
-Class 5: 98.09% 
-Class 6: 93.42% 
-Class 7: 96.98% 
-Class 8: 98.36% 
-Class 9: 98.32% 
+Class 0: 97.35%  
+Class 1: 98.77%  
+Class 2: 98.35%  
+Class 3: 95.84%  
+Class 4: 96.44%  
+Class 5: 98.09%  
+Class 6: 93.42%  
+Class 7: 96.98%  
+Class 8: 98.36%  
+Class 9: 98.32%  
 
 ---
 
