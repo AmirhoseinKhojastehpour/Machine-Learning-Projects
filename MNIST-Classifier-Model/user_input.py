@@ -11,9 +11,7 @@ class SimpleNN(nn.Module):
         super(SimpleNN, self).__init__()
         self.fc1 = nn.Linear(784, 512)  # First layer with 784 input and 128 output neurons
         self.tanh = nn.Tanh()  # Tanh activation for hidden layer
-        # self.dropout1 = nn.Dropout(p=0.05)
         self.fc2 = nn.Linear(512, 10)  # Second layer with 128 input and 10 output neurons (for 10 classes)
-        # self.leakyRelu = nn.leakyRelu(dim=1)  # leakyRelu for output layer
         self.leakyRelu = nn.LeakyReLU(0.2)
 
     def forward(self, x):

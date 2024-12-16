@@ -27,19 +27,15 @@ class SimpleNN(nn.Module):
         super(SimpleNN, self).__init__()
         self.fc1 = nn.Linear(784, 512)  # First layer with 784 input and 128 output neurons
         self.tanh = nn.Tanh()  # Tanh activation for hidden layer
-        self.dropout1 = nn.Dropout(p=0.1)
         self.fc2 = nn.Linear(512, 10)  # Second layer with 128 input and 10 output neurons (for 10 classes)
         self.leakyRelu = nn.LeakyReLU(0.2)
-        self.dropout2 = nn.Dropout(p=0.1)
 
     def forward(self, x):
         x = x.view(x.size(0), -1)  # Flatten the input tensor
         x = self.fc1(x)  # Apply first layer
         x = self.tanh(x)  # Apply tanh activation
-        # x = self.dropout1(x)  # Apply dropout
         x = self.fc2(x)  # Apply second layer
         x = self.leakyRelu(x)  # Apply leakyRelu activation
-        # x = self.dropout2(x) #Aplly dropout
         return x
 
 # Initialize the model, loss function, and optimizer
@@ -113,8 +109,12 @@ fig, axes = plt.subplots(2, 5, figsize=(15, 6))
 # Flatten the axes array to simplify indexing
 axes = axes.flatten()
 
+# Load the test set
+test_dataset = datasets.MNIST(root='./data', train=False, download=True, transform=transform)
+test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
+
 # Get some test images (using a subset from the train_loader here)
-data_iter = iter(train_loader)
+data_iter = iter(test_loader)
 images, labels = next(data_iter)
 
 # Make predictions
@@ -129,7 +129,7 @@ for i in range(num_images):
     ax.axis('off')
 
 # Adjust layout to add more space between the images
-plt.subplots_adjust(hspace=0.5, wspace=0.5)  # Increase the distance between images
+plt.subplots_adjust(hspace=0.5, wspace=0.5)
 
 plt.show()
 
@@ -142,7 +142,7 @@ model.eval()
 
 # Loop through the test data
 with torch.no_grad():
-    for inputs, labels in train_loader:
+    for inputs, labels in test_loader:
         outputs = model(inputs)
         _, predicted = torch.max(outputs, 1)
 
@@ -168,10 +168,6 @@ plt.show()
 for i in range(10):
     print(f'Class {i}: {class_accuracies[i]:.2f}%')
 
-# Load the test set
-test_dataset = datasets.MNIST(root='./data', train=False, download=True, transform=transform)
-test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
-
 # Evaluate on the test set
 model.eval()  # Set model to evaluation mode
 correct = 0
@@ -188,4 +184,4 @@ test_accuracy = correct / total
 print(f'Test Accuracy: {test_accuracy:.4f}')
 
 # Save the Model
-# torch.save(model.state_dict(), 'm4.pth')
+# torch.save(model.state_dict(), 'model.pth')
