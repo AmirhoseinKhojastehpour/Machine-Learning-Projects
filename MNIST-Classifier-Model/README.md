@@ -52,6 +52,7 @@ Epoch [7/10], Loss: 0.0549, Accuracy: 0.9841
 Epoch [8/10], Loss: 0.0469, Accuracy: 0.9863
 Epoch [9/10], Loss: 0.0444, Accuracy: 0.9868
 Epoch [10/10], Loss: 0.0417, Accuracy: 0.9874
+‍‍‍```
 
 ---
 
