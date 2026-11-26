@@ -1,2 +1,6 @@
 # Machine-Learning-Projects
  This repository serves as a collection of my machine learning projects, where I explore various algorithms and techniques to deepen my understanding of machine learning concepts. Each folder represents a unique project or experiment, demonstrating my learning journey through hands-on practice. These projects range from supervised and unsupervised learning to clustering and neural networks. Feel free to browse, learn, and share any feedback!
+
+## Other projects
+
+- [Iranian License Plate Recognition](https://github.com/AmirhoseinKhojastehpour/iranian-license-plate-recognition): plate detection with YOLO11n, character recognition with YOLOv5 and plate-type classification (Bachelor's final project)
